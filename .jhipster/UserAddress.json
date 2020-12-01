@@ -1,0 +1,36 @@
+{
+    "name": "UserAddress",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdAt",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "userId",
+            "otherEntityName": "userInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201201084843",
+    "entityTableName": "user_address",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "myapp"
+    ]
+}

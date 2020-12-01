@@ -1,0 +1,36 @@
+{
+    "name": "UserComments",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "comment",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "createdAt",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "userId",
+            "otherEntityName": "userInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20201201084842",
+    "entityTableName": "user_comments",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "myapp"
+    ]
+}

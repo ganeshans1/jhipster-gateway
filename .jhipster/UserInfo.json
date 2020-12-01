@@ -1,0 +1,54 @@
+{
+    "name": "UserInfo",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "emailId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdAt",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "modifiedAt",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userId",
+            "otherEntityName": "userComments",
+            "otherEntityRelationshipName": "userId"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "userId",
+            "otherEntityName": "userAddress",
+            "otherEntityRelationshipName": "userId"
+        }
+    ],
+    "changelogDate": "20201201084841",
+    "entityTableName": "user_info",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "myapp"
+    ]
+}

@@ -20,6 +20,8 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -76,6 +78,7 @@ public class UserinfoResource {
         if (userinfo.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
         }
+        userinfo.modifiedAt(ZonedDateTime.now(ZoneId.systemDefault()));
         Userinfo result = userinfoRepository.save(userinfo);
         return ResponseEntity.ok()
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, userinfo.getId().toString()))

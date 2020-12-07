@@ -9,5 +9,5 @@ import java.util.Optional;
 @FeignClient("gateway")
 public interface UserApi {
     @GetMapping("/api/users/{id}")
-    Optional<User> findById(@PathVariable("id") Long id);
+    Optional<Object> findById(@PathVariable("id") Long id);
 }

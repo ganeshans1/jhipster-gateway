@@ -10,5 +10,5 @@ import java.util.Optional;
 public interface UserAddressApi {
 
     @GetMapping("/api/user-addresses/user/{id}")
-    Optional<UserAddress> findById(@PathVariable("id") Long id);
+    Optional<Object> findById(@PathVariable("id") Long id);
 }
